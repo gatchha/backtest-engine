@@ -58,15 +58,4 @@ The drop from 0.87 to 0.59 confirms that the MA crossover overfits to the bull m
 - **Single asset:** results are specific to AAPL over 2010–2024 and may not generalize.
 - **Strategy simplicity:** MA crossover is a naive baseline, not a production strategy.
 
----
 
-## 5. How to Reuse This Engine
-
-The engine is modular. To plug in a new strategy:
-
-1. Write a function in `src/strategy.py` that takes a price Series and returns a position Series (already `.shift(1)`-ed inside the strategy).
-2. Pass the positions to `engine(positions, prices, fees_bps, slippage_bps)`.
-3. Use `src/metrics.py` for Sharpe, max drawdown, and turnover.
-4. Use `src/validation.py` to split data chronologically before evaluating.
-
-Projects 03 (stat arb / cointegration) and 05 (LLM signal validation) plug directly into this interface.
