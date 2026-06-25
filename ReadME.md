@@ -1,6 +1,6 @@
 # Backtesting Engine
 
-> *"A vectorized backtesting engine built to expose — and avoid — the classic biases: look-ahead bias, survivorship bias, and ignored transaction costs. Demonstrated on a MA crossover strategy that I show honestly does not survive real costs."*
+
 
 This engine demonstrates how easy it is to introduce bias in a strategy evaluation. We quantify look-ahead bias, compare performance before and after transaction costs, and validate out-of-sample — showing that honest results matter more than impressive Sharpe ratios.
 
